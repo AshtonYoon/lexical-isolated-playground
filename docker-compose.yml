@@ -1,0 +1,11 @@
+version: "1"
+
+services:
+  fivestar:
+    container_name: fivestar-admin
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: always
+    ports:
+      - 3003:3003

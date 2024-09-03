@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: rgb(205, 216, 227);
+  height: 100vh;
+}
+
+@layer components {
+  .badge {
+    @apply bg-bit-white text-light-bit-blue rounded-md text-[10px] w-10 h-5 text-center leading-5;
+  }
+
+  .input {
+    @apply appearance-none w-24 h-8 border border-[#F0F0F0] text-bit-gray rounded-[10px] focus:outline focus:outline-2 focus:outline-bit-blue text-sm font-semibold px-2 read-only:border-0 read-only:px-0 read-only:focus:outline-none;
+  }
+
+  .textarea {
+    @apply input w-full h-20 bg-bit-white py-1 read-only:px-2;
+  }
+
+  .input-error {
+    @apply outline outline-2 outline-red-500 focus:outline-red-500;
+  }
+
+  .row-base {
+    @apply grid items-center justify-items-center font-semibold text-sm text-bit-gray rounded-2xl even:bg-[#f3f3f3] w-fit;
+  }
+
+  .collection-progress-row {
+    @apply grid-cols-[160px_40px_160px_40px_160px] row-base py-2 min-h-[56px] justify-items-start pl-4;
+  }
+
+  .collection-row {
+    @apply grid-cols-[100px_120px_80px_80px_80px_80px_80px_80px_120px_120px_1fr_200px] row-base py-2 min-h-[56px] w-full;
+  }
+
+  .counsel-column {
+    @apply block w-full text-start text-ellipsis pl-12 break-all overflow-hidden max-h-[3em] leading-[1.5em];
+  }
+
+  .row {
+    @apply grid-cols-[120px_120px_120px_120px_40px_160px_80px_80px_120px_120px_80px_120px_100px] min-h-[56px] row-base;
+  }
+
+  .search-input {
+    @apply w-24 font-semibold outline-none text-xl text-bit-gray mt-2;
+  }
+
+  .search-header {
+    @apply font-semibold text-bit-blue;
+  }
+
+  .search-container {
+    @apply bg-white h-20 px-4 py-3 first:rounded-l-2xl last:rounded-r-2xl;
+  }
+
+  .button-base {
+    @apply transition-all ease-out hover:scale-110 active:scale-105 cursor-pointer;
+  }
+
+  .button-medium {
+    @apply button-base w-36 h-8 rounded-[10px] text-sm font-semibold;
+  }
+
+  .button-large {
+    @apply button-base w-44 h-12 rounded-2xl text-xl font-semibold;
+  }
+
+  .button-primary {
+    @apply bg-light-bit-blue text-white hover:drop-shadow-[0_0_6px_#ffffff66];
+  }
+
+  .button-secondary {
+    @apply bg-bit-white text-light-bit-blue hover:drop-shadow-[0_0_6px_#F7F7F766];
+  }
+
+  .button-warning {
+    @apply bg-red-500 text-white hover:drop-shadow-[0_0_6px_#CC333366];
+  }
+
+  .button-medium-primary {
+    @apply button-medium button-primary;
+  }
+
+  .button-medium-secondary {
+    @apply button-medium button-secondary;
+  }
+
+  .button-medium-warning {
+    @apply button-medium button-warning;
+  }
+
+  .button-large-primary {
+    @apply button-large button-primary;
+  }
+
+  .button-large-warning {
+    @apply button-large button-warning;
+  }
+
+  .tab-button-base {
+    @apply transition-all ease-out cursor-pointer;
+  }
+
+  .tab-button-secondary {
+    @apply text-light-bit-blue hover:bg-light-bit-blue/10 hover:drop-shadow-[0_0_6px_#F7F7F766] active:scale-90 active:bg-light-bit-blue/20;
+  }
+
+  .statement-row {
+    @apply grid grid-cols-2 [&>div]:text-bit-gray [&>h3]:text-bit-blue [&>h3]:h-11 [&>div]:h-11 [&>div]:text-end [&>*]:leading-[44px];
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
